@@ -16,7 +16,7 @@ CREATE TABLE FUNCIONARIOS (
     salario double(8,2) not null,
     data_admissao date not null,
     id_setor tinyint,
-    telefonte chat(10),
+    telefonte char(10),
     FOREIGN KEY (id_setor)
         REFERENCES SETORES(id_setor)
 );
