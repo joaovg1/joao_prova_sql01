@@ -23,8 +23,7 @@ CREATE TABLE FUNCIONARIOS (
 
 CREATE TABLE CATEGORIAS (
     id_categoria tinyint primary key auto_increment,
-    nome_categoria varchar(50),
-    cidade varchar(50)
+    nome_categoria varchar(50)
 );
 
 CREATE TABLE FORNECEDORES (
