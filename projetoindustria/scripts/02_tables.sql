@@ -16,7 +16,7 @@ CREATE TABLE FUNCIONARIOS (
     salario double(8,2) not null,
     data_admissao date not null,
     id_setor tinyint,
-    telefonte char(10),
+    telefone char(10),
     FOREIGN KEY (id_setor)
         REFERENCES SETORES(id_setor)
 );
@@ -28,7 +28,9 @@ CREATE TABLE CATEGORIAS (
 );
 
 CREATE TABLE FORNECEDORES (
-    id_fornecedor tinyint primary key auto_increment unique
+    id_fornecedor tinyint primary key auto_increment unique,
+    nome_fornecedor varchar(50),
+    cidade varchar(50)
 );
 
 CREATE TABLE PRODUTOS (
@@ -36,6 +38,7 @@ CREATE TABLE PRODUTOS (
     nome_produto varchar(50),
     id_categoria tinyint,
     id_fornecedor tinyint,
+    preco_fabricacao int,
     FOREIGN KEY (id_categoria)
         REFERENCES CATEGORIAS (id_categoria),
     FOREIGN KEY (id_fornecedor) 
