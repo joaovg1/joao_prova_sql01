@@ -1,2 +1,0 @@
-use techfactory_db;
-
